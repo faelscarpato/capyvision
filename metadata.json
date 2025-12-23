@@ -1,0 +1,7 @@
+{
+  "name": "CapyVision Elite",
+  "description": "A high-performance creative suite powered by Gemini 3 and Veo, featuring advanced image generation, AI video synthesis, and intelligent vision analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

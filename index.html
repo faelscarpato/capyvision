@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapyVision Elite | Suíte Criativa com IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- PWA Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#fbbf24">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iI2ZiYmYyNCIvPjxwYXRoIGQ9Ik02NCw4MGgxMjh2OTZoLTMydjMySDk2di0zMkg2NFY4MFoiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTIiIHI9IjgiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNODAsMTIwaDMybC0xNiwxNloiIGZpbGw9IiNmZmYiLz48L3N2Zz4=">
+
+    <style>
+        @keyframes neural-pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        @keyframes reveal-text {
+            from { clip-path: inset(0 100% 0 0); }
+            to { clip-path: inset(0 0 0 0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #02020a;
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .banana-glow {
+            background-image: radial-gradient(circle at 20% 30%, rgba(251, 191, 36, 0.1), transparent 50%), 
+                              radial-gradient(circle at 80% 70%, rgba(217, 70, 239, 0.05), transparent 50%);
+        }
+        .neural-bg {
+            background: radial-gradient(circle at center, #1e1b4b 0%, #02020a 100%);
+        }
+        .animate-reveal {
+            animation: reveal-text 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #02020a; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="banana-glow min-h-screen">
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('CapyVision SW registrado: ', reg.scope))
+            .catch(err => console.log('CapyVision SW falhou: ', err));
+        });
+      }
+    </script>
+</body>
+</html>

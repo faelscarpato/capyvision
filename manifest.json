@@ -1,0 +1,20 @@
+
+{
+  "name": "CapyVision Elite",
+  "short_name": "CapyVision",
+  "description": "Sua suíte criativa definitiva com IA Gemini e Veo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#02020a",
+  "theme_color": "#fbbf24",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0iI2ZiYmYyNCIvPjxwYXRoIGQ9Ik02NCw4MGgxMjh2OTZoLTMydjMySDk2di0zMkg2NFY4MFoiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMTIiIHI9IjgiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNODAsMTIwaDMybC0xNiwxNloiIGZpbGw9IiNmZmYiLz48L3N2Zz4=",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
